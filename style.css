@@ -415,9 +415,15 @@ button {
 
 /*Responsive tablet screens*/
 @media (max-width: 768px) {
-  .navbar__links { display: none; }
-  .navbar__link--desktop { display: none !important; }
-  .navbar__toggle { display: flex; }
+  .navbar__links {
+        display: none;
+     }
+  .navbar__link--desktop {
+     display: none !important; 
+    }
+  .navbar__toggle { 
+    display: flex; 
+}
 
   .navbar {
     width: calc(100% - 2rem);
@@ -430,4 +436,49 @@ button {
   .topbar__divider {
     display: none;
   }
+}
+@media (max-width:375px){
+    .navbar {
+    width: calc(100% - 1rem);
+    top: calc(var(--topbar-height) + 5px);
+  }
+}
+
+
+/*SVG MAIN*/
+.custom-shape-divider-bottom-1775219486 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1775219486 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 500px;
+}
+
+.custom-shape-divider-bottom-1775219486 .shape-fill {
+    fill: #8B572A;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .custom-shape-divider-bottom-1775219486 svg {
+        width: calc(100% + 1.3px);
+        height: 444px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1775219486 svg {
+        width: calc(193% + 1.3px);
+        height: 490px;
+    }
 }

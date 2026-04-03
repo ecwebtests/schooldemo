@@ -55,7 +55,7 @@ dropdownItems.forEach(item => {
       dropdownMenu.style.opacity = '0';
       dropdownMenu.style.pointerEvents = 'none';
       dropdownMenu.style.transform = 'translateX(-50%) translateY(6px)';
-    }, 200);
+    }, 100);
   }
 
   item.addEventListener('mouseenter', openMenu);
