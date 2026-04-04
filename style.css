@@ -501,3 +501,209 @@ button {
   z-index: 2; 
   right: 5%;
 }
+
+
+
+/* ── HERO SECTION ───────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top:  calc(var(--topbar-height) + var(--nav-height) + 2.5rem);
+  padding-bottom: 4rem;
+  overflow: hidden;
+  background: var(--color-cream);
+}
+
+/* Wave SVG — stretches across the full section bottom */
+.hero__wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: clamp(500px, 100vh, 600px);
+  display: block;
+  z-index: 3;
+}
+
+/* Two-column grid: text | visual */
+.hero__inner {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* ── Text column ─────────────────────────────────────────────── */
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.hero__tag {
+  display: inline-block;
+  font-size: clamp(0.58rem, 0.9vw, 0.7rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-liver);
+  border: 1px solid var(--color-tan);
+  padding: 0.28rem 0.85rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+/* Headline — both lines fill the full left column */
+.hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.2vw, 4.6rem);
+  font-weight: 300;
+  line-height: 1.08;
+  color: var(--color-liver);
+  display: flex;
+  flex-direction: column;
+  gap: 0.05em;
+  /* no max-width — fills entire left column */
+}
+
+.hero__title-line {
+  display: block;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--color-tan-dark);
+}
+
+.hero__lead {
+  font-size: clamp(0.88rem, 1.3vw, 1.05rem);
+  line-height: 1.78;
+  color: var(--color-muted);
+  max-width: 52%;    /* ← stops halfway, right side open */
+}
+
+.hero__body {
+  font-size: clamp(0.78rem, 1.1vw, 0.92rem);
+  line-height: 1.82;
+  color: var(--color-muted);
+  max-width: 52%;    /* ← same constraint */
+}
+
+.hero__actions {
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  padding-top: 0.4rem;
+}
+
+/* ── Visual column ───────────────────────────────────────────── */
+.hero__visual {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: clamp(300px, 48vh, 500px);
+  z-index: 5;
+}
+
+.hero__circle {
+  position: absolute;
+  width:  clamp(180px, 26vw, 360px);
+  height: clamp(180px, 26vw, 360px);
+  background: var(--color-tan);
+  border-radius: 50%;
+  bottom: clamp(30px, 6vh, 90px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0.88;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 3;
+  width: clamp(180px, 24vw, 340px);
+  height: auto;
+  object-fit: contain;
+  object-position: top;
+  filter: drop-shadow(0 10px 36px rgba(106,52,40,0.20));
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+
+/* Tablet: stack columns, paragraphs go full width */
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+  }
+
+  .hero__tag  { margin-inline: auto; }
+  .hero__title { align-items: center; }
+
+  /* restore full width for paragraphs when stacked */
+  .hero__lead,
+  .hero__body { max-width: 100%; }
+
+  .hero__actions { justify-content: center; }
+
+  .hero__visual {
+    height: clamp(220px, 38vw, 340px);
+  }
+
+  .hero__circle {
+    width:  clamp(150px, 32vw, 250px);
+    height: clamp(150px, 32vw, 250px);
+  }
+
+  .hero__image {
+    width: clamp(150px, 30vw, 240px);
+  }
+
+  .hero__wave {
+    height: clamp(160px, 30vh, 260px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .hero {
+    padding-top: calc(var(--topbar-height) + var(--nav-height) + 1rem);
+    padding-bottom: 2.5rem;
+  }
+
+  .hero__title {
+    font-size: clamp(1.7rem, 7.5vw, 2.4rem);
+  }
+
+  .hero__visual {
+    height: clamp(190px, 52vw, 280px);
+  }
+
+  .hero__circle {
+    width:  clamp(130px, 38vw, 200px);
+    height: clamp(130px, 38vw, 200px);
+  }
+
+  .hero__image {
+    width: clamp(130px, 50vw, 195px);
+  }
+
+  .hero__wave {
+    height: clamp(120px, 60vh, 190px);
+  }
+}
+
+/* Small phones */
+@media (max-width: 375px) {
+  .hero__title {
+    font-size: 1.6rem;
+  }
+  .hero__lead  { font-size: 0.82rem; }
+  .hero__body  { font-size: 0.75rem; }
+}
