@@ -20,19 +20,19 @@ function toggleMobileMenu() {
   if (mobileMenu && hamburger) {
     if (mobileMenu.hidden === false) {
       mobileMenu.hidden = true;
-      hamburger.classList.remove('show');
+      hamburger.classList.remove('show');  
     } else {
       mobileMenu.hidden = false;
-      hamburger.classList.add('show');
+      hamburger.classList.add('show');     
     }
   }
 }
 
 // Close mobile menu
 function closeMobileMenu() {
-  if (mobileMenu) {
-    mobileMenu.hidden = true; 
-    hamburger.classList.remove('show');
+  if (mobileMenu && hamburger) {
+    mobileMenu.hidden = true;
+    hamburger.classList.remove('show');    
   }
 }
 
@@ -40,10 +40,10 @@ function closeMobileMenu() {
 function handleClickOutside(event) {
   if (mobileMenu && !mobileMenu.hidden) {
     const isClickInside = (hamburger && hamburger.contains(event.target)) || 
-    (mobileMenu && mobileMenu.contains(event.target));
+                         (mobileMenu && mobileMenu.contains(event.target));
+    
     if (!isClickInside) {
       closeMobileMenu();
-      hamburger.classList.remove('show');
     }
   }
 }
@@ -53,8 +53,8 @@ dropdownItems.forEach(item => {
   const dropdownMenu = item.querySelector('.dropdown__menu');
   if (!dropdownMenu) return;
   
-  //Timer to allow the cursor to travel to the dropdown menu
   let closeTimer = null;
+
   function openMenu() {
     clearTimeout(closeTimer);
     dropdownMenu.style.opacity = '1';
