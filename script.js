@@ -32,6 +32,7 @@ function toggleMobileMenu() {
 function closeMobileMenu() {
   if (mobileMenu) {
     mobileMenu.hidden = true; 
+    hamburger.classList.remove('show');
   }
 }
 
@@ -42,6 +43,7 @@ function handleClickOutside(event) {
     (mobileMenu && mobileMenu.contains(event.target));
     if (!isClickInside) {
       closeMobileMenu();
+      hamburger.classList.remove('show');
     }
   }
 }
