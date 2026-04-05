@@ -4,228 +4,182 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
-  
-  <!-- Preconnect & Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
 
-  <!--Font owesome icons-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-  <!-- External CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Topbar -->
+
+  <!--TOPBAR ───────────────────────────────────── -->
   <header class="topbar">
     <div class="container topbar__inner">
       <div class="topbar__left">
-
-            <a href="tel:+256700000000" class="topbar__item">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
-                </svg>
-            <span>+256 7 000 000</span>
-            </a>
-
-            <span class="topbar__divider"></span>
-
-            <a href="mailto:school@example.com" class="topbar__item">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                    <polyline points="22,6 12,13 2,6"/>
-                </svg>
-            <span>school@example.com</span>
-            </a>
-
-            <span class="topbar__divider"></span>
-
-            <div class="topbar__item">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-            <span>Lira, Uganda</span>
-            </div>
+        <a href="tel:+256700000000" class="topbar__item">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+          </svg>
+          <span>+256 777 891 000</span>
+        </a>
+        <span class="topbar__divider"></span>
+        <a href="mailto:school@example.com" class="topbar__item">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span>school@example.com</span>
+        </a>
+        <span class="topbar__divider"></span>
+        <div class="topbar__item">
+          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+          <span>Lira, Uganda</span>
         </div>
-
-        <div class="topbar__right">
-            <span class="topbar__item">Mon – Fri 8am – 6pm</span>
-
-            <span class="topbar__divider"></span>
-            <nav class="topbar__social" aria-label="Social media">
-                <a href="#" aria-label="Twitter">
-                    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622z"/></svg>
-                </a>
-
-                <a href="#" aria-label="LinkedIn">
-                    <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
-
-                <a href="#" aria-label="Instagram">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-                </a>
-            </nav>
-        </div>
+      </div>
+      <div class="topbar__right">
+        <span class="topbar__item">Mon – Fri &nbsp;8am – 6pm</span>
+        <span class="topbar__divider"></span>
+        <nav class="topbar__social" aria-label="Social media">
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622z"/></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          
+        </nav>
+      </div>
     </div>
   </header>
 
-  <!-- Navigation -->
+  <!-- ── NAVBAR ───────────────────────────────────── -->
   <nav id="mainNav" class="navbar">
     <div class="container navbar__inner">
       <a href="#" class="navbar__logo">AW<span>S</span></a>
-      <ul class="navbar__links">
 
+      <ul class="navbar__links">
         <li class="navbar__item">
           <a href="#hero" class="navbar__link">Home</a>
         </li>
 
         <li class="navbar__item dropdown">
-          <a href="#about" class="navbar__link">
-            About Us
-            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
-                <polyline points="1,1 5,5 9,1"/>
-            </svg>
+          <a href="#about" class="navbar__link">About Us
+            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
           </a>
-
           <div class="dropdown__menu">
             <div class="dropdown__header">Who we are</div>
-                <a href="#about"><i class="fa fa-home" aria-hidden="true"></i>Our School</a>
-                <a href="#about"><i class="fa fa-info-circle" aria-hidden="true"></i>Mission & Vision</a>
-                <a href="#about"><i class="fa fa-users" aria-hidden="true"></i>Administration</a>
-                <a href="#about"><i class="fa fa-trophy" aria-hidden="true"></i>Accreditation</a>
+            <a href="#about"><i class="fa fa-home"></i>Our School</a>
+            <a href="#about"><i class="fa fa-info-circle"></i>Mission &amp; Vision</a>
+            <a href="#about"><i class="fa fa-users"></i>Administration</a>
+            <a href="#about"><i class="fa fa-history"></i>History</a>
+            <a href="#about"><i class="fa fa-trophy"></i>Accreditation</a>
           </div>
         </li>
 
         <li class="navbar__item dropdown">
-          <a href="#academics" class="navbar__link">
-            Academics
-            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
-                <polyline points="1,1 5,5 9,1"/>
-            </svg>
+          <a href="#academics" class="navbar__link">Academics
+            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
           </a>
-
           <div class="dropdown__menu">
-                <a href="#features"><i class="fa fa-line-chart" aria-hidden="true"></i>Performance</a>
-                <a href="#features"><i class="fa fa-file" aria-hidden="true"></i>Requirements</a>
-                <a href="#features"><i class="fa fa-money" aria-hidden="true"></i>Fees & Tuition</a>
-                <a href="#features"><i class="fa fa-book" aria-hidden="true"></i>Library</a>
+            <div class="dropdown__header">Learning</div>
+            <a href="#academics"><i class="fa fa-book"></i>Programmes &amp; Depts</a>
+            <a href="#academics"><i class="fa fa-file-text"></i>Curriculum</a>
+            <a href="#academics"><i class="fa fa-calendar"></i>Timetable</a>
+            <a href="#academics"><i class="fa fa-check-square-o"></i>Examinations</a>
+            <a href="#academics"><i class="fa fa-bookmark"></i>Library</a>
           </div>
         </li>
 
         <li class="navbar__item dropdown">
-            <a href="#team" class="navbar__link">
-                Community
-                <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true">
-                    <polyline points="1,1 5,5 9,1"/>
-                </svg>
-            </a>
-            <div class="dropdown__menu">
-                    <a href="#community"><i class="fa fa-briefcase" aria-hidden="true"></i>Staff Portal</a>
-                    <a href="#community"><i class="fa fa-file-text" aria-hidden="true"></i>Gallery</a>
-                    <a href="#community"><i class="fa fa-newspaper-o" aria-hidden="true"></i>News & Events</a>
-            </div>
+          <a href="#admissions" class="navbar__link">Admissions
+            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
+          </a>
+          <div class="dropdown__menu">
+            <div class="dropdown__header">Join us</div>
+            <a href="#admissions"><i class="fa fa-sign-in"></i>How to Apply</a>
+            <a href="#admissions"><i class="fa fa-list-ul"></i>Requirements</a>
+            <a href="#admissions"><i class="fa fa-money"></i>Fees & Tuition</a>
+            <a href="#admissions"><i class="fa fa-star"></i>Scholarships</a>
+            <a href="#admissions"><i class="fa fa-question-circle"></i>FAQs</a>
+          </div>
         </li>
 
+        <li class="navbar__item dropdown">
+          <a href="#community" class="navbar__link">Community
+            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
+          </a>
+          <div class="dropdown__menu">
+            <div class="dropdown__header">School life</div>
+            <a href="#community"><i class="fa fa-newspaper-o"></i>News &amp; Events</a>
+            <a href="#community"><i class="fa fa-picture-o"></i>Gallery</a>
+            <a href="#community"><i class="fa fa-briefcase"></i>Staff Portal</a>
+            <a href="#community"><i class="fa fa-users"></i>Student Life</a>
+            <a href="#community"><i class="fa fa-phone"></i>Contact Us</a>
+          </div>
+        </li>
       </ul>
 
       <div class="navbar__actions">
-            <a href="#team" class="navbar__link navbar__link--desktop">Contact</a>
-
-            <a href="#hero" class="btn btn--primary btn--sm">Get Started</a>
-
-            <button class="navbar__toggle" id="hamburger" aria-label="Toggle menu">
-            <span></span>
-            <span></span>
-            <span></span>
-            </button>
-
+        <button class="navbar__toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu" hidden>
-    <a href="#hero" class="mobile-menu__link">Home</a>
-    <a href="#about" class="mobile-menu__link">About</a>
-    <a href="#features" class="mobile-menu__link">Features</a>
-    <a href="#team" class="mobile-menu__link">Team</a>
-    <a href="#hero" class="mobile-menu__link mobile-menu__link--cta">Get Started →</a>
+
+
+  <!-- ── MOBILE MENU ──────────────────────────────── -->
+  <div class="mobile-menu" id="mobileMenu" hidden >
+    <a href="#hero"       class="mobile-menu__link">Home</a>
+    <a href="#about"      class="mobile-menu__link">About Us</a>
+    <a href="#academics"  class="mobile-menu__link">Academics</a>
+    <a href="#admissions" class="mobile-menu__link">Admissions</a>
+    <a href="#community"  class="mobile-menu__link">Community</a>
+    <a href="#admissions" class="mobile-menu__link mobile-menu__link--cta">Apply Now →</a>
   </div>
 
-  
-<main>
-  <section class="hero" id="hero">
+  <!--MAIN ─────────────────────────────────────── -->
+  <main>
 
-    <!-- Wave — absolute background layer -->
-    <svg class="hero__wave"
-     viewBox="0 0 1440 80"
-     preserveAspectRatio="none"
-     xmlns="http://www.w3.org/2000/svg">
+    <section class="hero" id="hero">
+        <!-- Wave-->
+        <svg class="hero__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="waveGradient" x1="0%" y1="0%" x2="100%" y2="0%"> 
+                  <stop offset="0%" stop-color="#6B4F3A"/>
+                  <stop offset="100%" stop-color="#C19A6B"/>
+                </linearGradient>
+            </defs>
+            <!--Gradient  color fill -->
+            <path fill="url(#waveGradient)" d="M0,35 C300,5 950,65 1440,20 L1440,120 L0,120 Z"/>
+        </svg>
+        <div class="container hero__inner">
+            <div class="hero__text">
+                <h1 class="hero__title">
+                  <span class="hero__title-line">Your Journey Begins Here With Excellence</span>
+                </h1>
 
-  <!-- Define Gradient -->
-  <defs>
-    <linearGradient id="waveGradient"
-                    x1="0%"
-                    y1="0%"
-                    x2="100%"
-                    y2="0%">
+                <p class="hero__lead">Discover your voice. Unlock your potential.</p>
+                <p class="hero__body">A vibrant learning community dedicated to nurturing bright minds across Uganda.</p>
+            </div>
+            <!--Right column: circle + image -->
+            <div class="hero__visual">
+              <div class="hero__circle"></div>
+              <img class="hero__image" src="Images/student-remove.png" alt="Student Image" />
+            </div>
+        </div>
 
-      <stop offset="0%" stop-color="#6B4F3A"/>
-      <stop offset="100%" stop-color="#C19A6B"/>
+    </section>
+  </main>
 
-    </linearGradient>
-  </defs>
-
-  <!-- Use Gradient -->
-  <path fill="url(#waveGradient)"
-        d="M0,65 C300,10 950,75 1440,30 L1440,120 L0,120 Z"/>
-
-</svg>
-
-
-    <div class="container hero__inner">
-
-      <!-- LEFT — text -->
-      <div class="hero__text">
-
-        <!-- Lead paragraph: stops at 55% — right 45% left for visual -->
-        <p class="hero__lead">
-          A place where every student discovers their voice,
-          their purpose, and their potential.
-        </p>
-
-        <!-- Body paragraph: same left-half constraint -->
-        <p class="hero__body">
-          Founded on the values of academic excellence and
-          community spirit — we nurture curious minds and
-          compassionate hearts.
-        </p>
-
-        
-
-      </div>
-
-      <!-- RIGHT — circle + student image -->
-      <div class="hero__visual" aria-hidden="true">
-        <div class="hero__circle"></div>
-        <img
-          class="hero__image"
-          src="Images/student-remove.png"
-          alt="Student"
-        />
-      </div>
-
-    </div>
-  </section>
-</main>
-
-
-
-  <!-- External JS -->
   <script src="script.js" defer></script>
 </body>
 </html>
