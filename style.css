@@ -668,15 +668,16 @@ button {
     display: flex;
   }
   .hero__circle{
-    right:-90%;
-    width:180px;
-    height:180px;
-    bottom: 40%;
+    left:5px;
+    width:280px;
+    height:280px;
+    bottom: 20%;
   }
   .hero__image{
     bottom: 10%;
-    width: 200px;
-    height: 400px;
+    width: 400px;
+    height: 800px;
+    left: 10px;
   }
   .hero__wave__mobile{
     display: block;
