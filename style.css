@@ -445,7 +445,7 @@ button {
     font-weight: 500;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--color-tan-dark);
+    color: var(--color-liver);
     padding: 0.5rem 0 0.25rem 0;
     margin-top: 0.25rem;
 }
@@ -456,8 +456,8 @@ button {
     align-items: center;
     gap: 0.75rem;
     padding: 0.6rem 0;
-    font-size: 0.9rem;
-    color: var(--color-muted);
+    font-size: 0.75rem;
+    color: var(--color-liver);
     text-decoration: none;
     transition: color var(--transition), padding-left var(--transition);
     border-bottom: none;
@@ -470,7 +470,7 @@ button {
 
 /* Regular mobile menu links */
 .mobile-menu__link {
-    font-size: .7rem;
+    font-size: 0.75rem;
     font-weight: 500;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -545,15 +545,14 @@ button {
 }
 
 .hero-title-line{
-  display: block;
   font-family: var(--font-display);
   font-size: clamp(2rem,5vw,4.5rem);
   line-height: 1.1;
   color: var(--color-liver);
+  font-style: italic;
 }
-/* PARAGRAPHS_________________________________________________ */
 
-/* VISUAL ________________________________________________________*/
+/* IMAGE and The Circle________________________________________________________*/
 .hero-visual{
   position: relative;
   height: 450px;
@@ -646,7 +645,7 @@ button {
 }
 .hero-circle{
   right: -35%;
-  bottom: 35%;
+  bottom: 55%;
 
 }
 .hero-image{
