@@ -545,7 +545,6 @@ button {
 }
 
 .hero-title-line{
-
   display: block;
   font-family: var(--font-display);
   font-size: clamp(2rem,5vw,4.5rem);
@@ -558,7 +557,7 @@ button {
 .hero-visual{
   position: relative;
   width: 50%;
-  height: 500px;
+  height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -654,11 +653,6 @@ button {
   transform: translateX(25%);
 }
 
-.hero-title-line,
-.hero-lead,
-.hero-body{
-  color: var(--color-cream);
-}
  .topbar__left .topbar__item:not(:first-child),
  .topbar__divider{ 
     display: none;
