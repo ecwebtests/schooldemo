@@ -370,7 +370,7 @@ button {
 .mobile-menu {
     display: none;
     position: fixed;
-    top: calc(var(--topbar-height) + var(--nav-height) + 18px);
+    top: calc(var(--topbar-height) + var(--nav-height) + 15px);
     left: 0;
     right: 0;
     height: calc(100vh - (var(--topbar-height) + var(--nav-height) + 18px));
@@ -378,16 +378,15 @@ button {
     background: rgba(250, 246, 238, 0.95);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--color-tan-light);
     padding: var(--space-md);
     z-index: 500;
     flex-direction: column;
     gap: var(--space-sm);
-    transition: all 0.4s ease;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
 }
 
-
-/* DARK OVERLAY STYLINGS - POSITIONED BEHIND NAVBAR BUT ABOVE CONTENT */
+/* DARK OVERLAY STYLINGS -_______________________________________ */
 .menu-overlay {
   position: fixed;
   top: calc(var(--nav-height) + var(--topbar-height) + 18px);
@@ -575,6 +574,8 @@ button {
   flex-direction: column;
   gap: 1.2rem;
   align-items: flex-start;
+  color: var(--color-liver);
+  font-style: italic;
 }
 
 .hero-title-line{
@@ -608,7 +609,7 @@ button {
 
 .hero-image{
   position: relative;
-  width: clamp(260px,26vw,380px);
+  width: clamp(360px,46vw,680px);
   z-index: 2;
   object-fit: contain;
   filter: drop-shadow(
@@ -711,10 +712,14 @@ button {
     display: flex;
   }
 .hero-circle{
-  right: -45%;
+  right: -50%;
+  top: -30%;
 }
 .hero-image{
-  transform: translateX(30%);
+  transform: translateX(40%);
+  top: -30%;
+  
+  
 }
 .hero-title-line{
   font-size: 2rem;
