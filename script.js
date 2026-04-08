@@ -5,7 +5,7 @@ const mobileMenu = document.getElementById('mobileMenu');
 const dropdownItems = document.querySelectorAll('.navbar__item.dropdown');
 const menuOverlay = document.getElementById('menuOverlay');
 
-// Navbar Scroll Shadow
+// Navbar Scroll Shadow______________________________________________________
 function handleNavScroll() {
   if (navbar) {
     if (window.scrollY > 20) {
@@ -16,7 +16,7 @@ function handleNavScroll() {
   }
 }
 
-// Mobile Menu Toggle
+// Mobile Menu Toggle________________________________________________________
 function toggleMobileMenu() {
   if (mobileMenu && hamburger) {
     if (mobileMenu.hidden === false) {
@@ -32,7 +32,7 @@ function toggleMobileMenu() {
   }
 }
 
-// Close mobile menu
+// Close mobile menu________________________________________________________________
 function closeMobileMenu() {
   if (mobileMenu && hamburger) {
     mobileMenu.hidden = true;
@@ -42,7 +42,7 @@ function closeMobileMenu() {
   }
 }
 
-// Close mobile menu when clicking outside
+// Close mobile menu when clicking outside__________________________________________
 function handleClickOutside(event) {
   if (mobileMenu && !mobileMenu.hidden) {
     const isClickInside = (hamburger && hamburger.contains(event.target)) || 
@@ -54,7 +54,22 @@ function handleClickOutside(event) {
   }
 }
 
-// Dropdown Hover (Desktop)
+//OVERLAY FUNCTION THAT STOPS SCROLLING_____________________________________________
+function openOverLay(){
+  //Show mobile overlay
+  menuOverlay.style.display='block';
+  document.body.classList.add('no-scroll');
+}
+
+
+function closeOverlay(){
+  //Remove overlay
+  menuOverlay.style.display='none';
+  document.body.classList.remove('no-scroll');
+}
+
+
+// Dropdown Hover Desktop________________________________________________________________
 dropdownItems.forEach(item => {
   const dropdownMenu = item.querySelector('.dropdown__menu');
   if (!dropdownMenu) return;
@@ -82,8 +97,9 @@ dropdownItems.forEach(item => {
   dropdownMenu.addEventListener('mouseleave', closeMenu);
 });
 
-// ========== MOBILE DROPDOWN FUNCTIONALITY ==========
 
+
+//MOBILE DROPDOWN FUNCTIONALITY_____________________________________________________________
 // Close all mobile dropdowns
 function closeAllMobileDropdowns() {
   const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
@@ -92,7 +108,7 @@ function closeAllMobileDropdowns() {
   });
 }
 
-// Initialize mobile dropdown toggles
+// Initialize mobile dropdown toggles___________________________________________________________
 function initMobileDropdowns() {
   const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
   
@@ -103,7 +119,7 @@ function initMobileDropdowns() {
       trigger.addEventListener('click', (e) => {
         e.stopPropagation();
         
-        // Close other open dropdowns (accordion behavior)
+        // Close other open dropdowns
         mobileDropdowns.forEach(otherDropdown => {
           if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
             otherDropdown.classList.remove('open');
@@ -119,11 +135,16 @@ function initMobileDropdowns() {
 
 
 
-// EVENT LISTENERS 
+
+
+// EVENT LISTENERS___________________________________________________________
 // Scroll event
 window.addEventListener('scroll', handleNavScroll);
+
+
 // Hamburger click
 hamburger?.addEventListener('click', toggleMobileMenu);
+
 
 //OverLay click
 menuOverlay?.addEventListener('click',closeMobileMenu);
@@ -132,11 +153,13 @@ menuOverlay?.addEventListener('click',closeMobileMenu);
 
 // Mobile menu links - close menu when clicked
 if (mobileMenu) {
+
   // Close menu when clicking regular links 
   mobileMenu.querySelectorAll('.mobile-menu__link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
   
+
   // For dropdown links, close menu after navigation
   mobileMenu.querySelectorAll('.mobile-dropdown__link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
@@ -151,6 +174,28 @@ function init() {
   handleNavScroll();
   initMobileDropdowns();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Start when DOM is ready
 if (document.readyState === 'loading') {

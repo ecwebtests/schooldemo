@@ -383,25 +383,27 @@ button {
     gap: var(--space-sm);
 }
 
-/* DARK OVERLAY________________________________________________ */
+/* DARK OVERLAY STYLINGS________________________________________________ */
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.7);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
   z-index: 400;
   width: 100vw;
   height: 100vh;
+  display: none;
 }
-
 
 /* When menu is open */
 .menu-overlay.show {
   opacity: 1;
   visibility: visible;
 }
+
+
 
 
 .mobile-menu:not([hidden]) {
@@ -628,6 +630,14 @@ button {
 /* TABLET __________________________________________________________*/
 
 @media (max-width:900px){
+
+  .menu-overlay{
+    display: block;
+  }
+  /*Preventing scrolling when overlay is on*/
+  body.no-scroll{
+  overflow: hidden;
+  }
   .navbar__links{
     display:none;
   }
