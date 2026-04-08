@@ -3,6 +3,7 @@ const navbar = document.getElementById('mainNav');
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const dropdownItems = document.querySelectorAll('.navbar__item.dropdown');
+const menuOverlay = document.getElementById('menuOverlay');
 
 // Navbar Scroll Shadow
 function handleNavScroll() {
@@ -21,10 +22,12 @@ function toggleMobileMenu() {
     if (mobileMenu.hidden === false) {
       mobileMenu.hidden = true;
       hamburger.classList.remove('show');
+      menuOverlay.classList.remove('show');
       closeAllMobileDropdowns(); // Close dropdowns when closing menu
     } else {
       mobileMenu.hidden = false;
       hamburger.classList.add('show');
+      menuOverlay.classList.add('show');
     }
   }
 }
@@ -34,6 +37,7 @@ function closeMobileMenu() {
   if (mobileMenu && hamburger) {
     mobileMenu.hidden = true;
     hamburger.classList.remove('show');
+    menuOverlay.classList.remove('show');
     closeAllMobileDropdowns(); // Close all dropdowns when menu closes
   }
 }
@@ -120,6 +124,11 @@ function initMobileDropdowns() {
 window.addEventListener('scroll', handleNavScroll);
 // Hamburger click
 hamburger?.addEventListener('click', toggleMobileMenu);
+
+//OverLay click
+menuOverlay?.addEventListener('click',closeMobileMenu);
+
+
 
 // Mobile menu links - close menu when clicked
 if (mobileMenu) {
