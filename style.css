@@ -387,11 +387,13 @@ button {
 .menu-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.5);
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  z-index: 199;  /* Changed from 150 to 99 - below mobile menu */
+  z-index: 400;
+  width: 100vw;
+  height: 100vh;
 }
 
 
@@ -702,3 +704,11 @@ button {
   font-size: 2rem;
 }
 }
+
+.menu-overlay { z-index: 400; }
+
+.mobile-menu { z-index: 500; }
+
+.navbar { z-index: 600; }
+
+.topbar { z-index: 700; }
