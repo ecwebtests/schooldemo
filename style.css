@@ -371,7 +371,7 @@ button {
     top: calc(var(--topbar-height) + var(--nav-height) + 18px);
     left: 0;
     right: 0;
-    max-height: calc(100vh - (var(--topbar-height) + var(--nav-height) + 18px));
+    min-height: calc(100vh - (var(--topbar-height) + var(--nav-height) + 18px));
     overflow-y: auto;
     background: rgba(250, 246, 238, 0.95);
     backdrop-filter: blur(10px);
@@ -388,12 +388,11 @@ button {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.35);
-  backdrop-filter: blur(4px);
-  /* Hidden by default */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
   z-index: 249;
+  min-height: 100vh;
 }
 
 
