@@ -120,7 +120,7 @@ button {
   top: 0;
   left: 0; 
   right: 0;
-  z-index: 300;
+  z-index: 700;
   height: var(--topbar-height);
   background: var(--color-liver);
   display: flex;
@@ -201,7 +201,7 @@ button {
   top: calc(var(--topbar-height) + 10px);
   left: 50%;
   transform: translateX(-50%);
-  z-index: 200;
+  z-index: 600;
   width: min(1160px, calc(100% - 2.5rem));
   height: var(--nav-height);
   background: rgba(250, 246, 238, 0.55);  
@@ -380,15 +380,19 @@ button {
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--color-tan-light);
     padding: var(--space-md);
-    z-index: 200;
+    z-index: 500;
     flex-direction: column;
     gap: var(--space-sm);
 }
 
+
 /* DARK OVERLAY STYLINGS________________________________________________ */
 .menu-overlay {
   position: fixed;
-  inset: 0;
+  top: calc(var(--topbar-height) + var(--nav-height) + 18px);
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: rgba(0,0,0,0.7);
   opacity: 0;
   visibility: hidden;
@@ -717,10 +721,6 @@ button {
 }
 }
 
-.menu-overlay { z-index: 400; }
 
-.mobile-menu { z-index: 500; }
 
-.navbar { z-index: 600; }
 
-.topbar { z-index: 700; }
