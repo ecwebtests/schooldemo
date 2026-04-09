@@ -576,8 +576,6 @@ button {
   align-items: flex-start;
   color: var(--color-liver);
   font-style: italic;
-  position: absolute;
-  z-index: 8100;
 }
 
 .hero-title-line{
@@ -587,10 +585,10 @@ button {
   color: var(--color-liver);
   font-style: italic;
 }
-/*PARAGRAPHS Change text color when it flows over svg ________________________________________*/
+/*PARAGRAPHS Change text color when it flows over ________________________________________*/
 
 .change__text_color {
-  color: #fff;
+  color: var(--color-tan);
   transition: color 0.3s ease;
 }
 
@@ -611,23 +609,20 @@ button {
 /* CIRCLE ________________________________________________________*/
 .hero-circle{
   position: absolute;
-  width: clamp(300px,20vw,400px);
-  height: clamp(300px,20vw,400px);
+  width: clamp(300px,28vw,400px);
+  height: clamp(300px,28vw,400px);
   background: var(--color-tan);
   border-radius: 50%;
-  right: -100px;
-  bottom: 70px;
+  right: 0;
+  bottom: 0;
   z-index: 1;
-  border: 5px solid #fff;
-  
 }
 /* IMAGE __________________________________________________________ */
 
 .hero-image{
   position: relative;
-  width: clamp(350px,20vw,480px);
+  width: clamp(450px,46vw,680px);
   z-index: 2;
-  margin-top: 50%;
   object-fit: contain;
   filter: drop-shadow(
       0 12px 40px rgba(0,0,0,0.2)
@@ -677,27 +672,11 @@ button {
   margin-top: var(--space-xl);
 }
 .hero-circle{
-
-  width: 400px;
-  height: 400px;
-
-  right: -100px;
-  bottom: 70px;
-  z-index: 1;
-  border: 5px solid #fff;
-  
+  right: -8%;
+  top: 10%;
 }
 .hero-image{
-  position: relative;
-  width: 480px;
-  z-index: 2;
-  margin-top: 50%;
-  object-fit: contain;
- 
-
-}
-.hero-image{
-  transform: translateX(40%);
+  transform: translateX(10%);
 }
 }
 
@@ -745,18 +724,16 @@ button {
     display: flex;
   }
 .hero-circle{
-  right: -100%;
-  top: -10%;
-  
-  background-color: var(--color-liver);
+  right: -60%;
+  top: -30%;
 }
 .hero-image{
   transform: translateX(35%);
   top: -30%;
+  
+  
 }
 .hero-title-line{
-  font-size: 1.8rem;
-  
-  color: var(--color-tan);
+  font-size: 2rem;
 }
 }
