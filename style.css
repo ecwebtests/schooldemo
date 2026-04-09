@@ -469,13 +469,13 @@ button {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--color-liver);
-    border-bottom: 1px solid rgba(0,0,0,0.05);
+
 }
 
 .mobile-chevron {
@@ -508,15 +508,15 @@ button {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--color-tan-dark);
-    padding: 1rem 0 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 0;
 }
 
 .mobile-dropdown__link {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
-    padding: 0.8rem 0;
-    font-size: 0.9rem;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 0.65rem;
     color: var(--color-muted);
     transition: all 0.2s;
 }
@@ -528,10 +528,10 @@ button {
 
 .mobile-menu__link--cta {
     color: var(--color-cream);
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     background: var(--color-liver);
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-md);
     padding: 1rem;
     margin-top: 1rem;
     box-shadow: var(--shadow-sm);
@@ -543,7 +543,9 @@ button {
 }
 
 @media (min-width: 901px) {
-  .mobile-menu, .menu-overlay { display: none !important; }
+  .mobile-menu, .menu-overlay { 
+    display: none !important; 
+  }
 }
 
 /* HERO SECTION________________________________________________________ */
