@@ -256,7 +256,7 @@ button {
 }
 .navbar__link:hover, .navbar__item:hover > .navbar__link{
   color: var(--color-liver);
-  background: var(--color-tan-light);
+  
 }
 .navbar__link--desktop{
    display: none;
@@ -551,8 +551,6 @@ button {
   overflow: hidden;
 }
 
-
-
 /* CONTAINER _________________________________________________ */
 
 .hero-container{
@@ -586,12 +584,6 @@ button {
   font-style: italic;
 }
 /*PARAGRAPHS Change text color when it flows over ________________________________________*/
-
-.change__text_color {
-  color: var(--color-tan);
-  transition: color 0.3s ease;
-}
-
 .hero-lead{
   font-weight: 500;
   
@@ -621,9 +613,10 @@ button {
 
 .hero-image{
   position: relative;
-  width: clamp(450px,46vw,680px);
+  width: clamp(500px,56vw,680px);
+  height: clamp(500px,56vw,680px);
   z-index: 2;
-  object-fit: contain;
+  object-fit: cover;
   filter: drop-shadow(
       0 12px 40px rgba(0,0,0,0.2)
  );
@@ -643,9 +636,6 @@ button {
 .hero-wave--mobile{
   display: none;
 }
-
-
-
 /* TABLET __________________________________________________________*/
 
 @media (max-width:900px){
@@ -669,14 +659,17 @@ button {
 .hero-text{
   width: 100%;
   align-items: flex-start;
-  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xs);
+  
 }
 .hero-circle{
   right: -8%;
-  top: 10%;
+  top: -20%;
+ 
 }
 .hero-image{
-  transform: translateX(10%);
+  transform: translateX(-40%);
+  
 }
 }
 
@@ -700,7 +693,9 @@ button {
 .hero-circle{
   right: -35%;
   bottom: 55%;
-
+}
+.hero-text{
+  margin-top: var(--space-md);
 }
 .hero-image{
   transform: translateX(25%);
