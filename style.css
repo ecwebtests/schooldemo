@@ -576,6 +576,8 @@ button {
   align-items: flex-start;
   color: var(--color-liver);
   font-style: italic;
+  position: absolute;
+  z-index: 8100;
 }
 
 .hero-title-line{
@@ -585,32 +587,47 @@ button {
   color: var(--color-liver);
   font-style: italic;
 }
+/*PARAGRAPHS Change text color when it flows over svg ________________________________________*/
+
+.change__text_color {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.hero-lead{
+  font-weight: 500;
+  
+}
 
 /* IMAGE and The Circle________________________________________________________*/
 .hero-visual{
   position: relative;
-  height: 450px;
+  height: 400px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  
 }
 /* CIRCLE ________________________________________________________*/
 .hero-circle{
   position: absolute;
-  width: clamp(260px,28vw,420px);
-  height: clamp(260px,28vw,420px);
+  width: clamp(300px,20vw,400px);
+  height: clamp(300px,20vw,400px);
   background: var(--color-tan);
   border-radius: 50%;
-  right: 0;
-  bottom: 0;
+  right: -100px;
+  bottom: 70px;
   z-index: 1;
+  border: 5px solid #fff;
+  
 }
 /* IMAGE __________________________________________________________ */
 
 .hero-image{
   position: relative;
-  width: clamp(360px,46vw,680px);
+  width: clamp(350px,20vw,480px);
   z-index: 2;
+  margin-top: 50%;
   object-fit: contain;
   filter: drop-shadow(
       0 12px 40px rgba(0,0,0,0.2)
@@ -660,11 +677,27 @@ button {
   margin-top: var(--space-xl);
 }
 .hero-circle{
-  right: -8%;
-  top: 10%;
+
+  width: 400px;
+  height: 400px;
+
+  right: -100px;
+  bottom: 70px;
+  z-index: 1;
+  border: 5px solid #fff;
+  
 }
 .hero-image{
-  transform: translateX(10%);
+  position: relative;
+  width: 480px;
+  z-index: 2;
+  margin-top: 50%;
+  object-fit: contain;
+ 
+
+}
+.hero-image{
+  transform: translateX(40%);
 }
 }
 
@@ -712,16 +745,18 @@ button {
     display: flex;
   }
 .hero-circle{
-  right: -50%;
-  top: -30%;
+  right: -100%;
+  top: -10%;
+  
+  background-color: var(--color-liver);
 }
 .hero-image{
-  transform: translateX(40%);
+  transform: translateX(35%);
   top: -30%;
-  
-  
 }
 .hero-title-line{
-  font-size: 2rem;
+  font-size: 1.8rem;
+  
+  color: var(--color-tan);
 }
 }

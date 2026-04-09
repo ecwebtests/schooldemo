@@ -4,6 +4,8 @@ const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const dropdownItems = document.querySelectorAll('.navbar__item.dropdown');
 const menuOverlay = document.getElementById('menuOverlay');
+const heroleadText = document.querySelector('.hero-text');
+const waveDesktopSvg = document.getElementById('hero-wave--desktop');
 
 // Navbar Scroll Shadow______________________________________________________
 function handleNavScroll() {
@@ -15,6 +17,27 @@ function handleNavScroll() {
     }
   }
 }
+
+//Observer that changes text color when it flows over SVG
+const Observer =new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      heroleadText.classList.add('change__text_color');
+    }else{
+      heroleadText.classList.remove('.change__text_color');
+    }
+  });
+},
+
+
+//Trigger when 10% in viewport
+{
+  root:null,
+  threshold:0.1
+});
+
+
+
 
 // Mobile Menu Toggle________________________________________________________
 function toggleMobileMenu() {
@@ -67,6 +90,7 @@ function closeOverlay(){
   menuOverlay.style.display='none';
   document.body.classList.remove('no-scroll');
 }
+
 
 
 // Dropdown Hover Desktop________________________________________________________________
