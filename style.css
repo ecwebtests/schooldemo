@@ -330,7 +330,9 @@ button {
 .navbar__toggle.show span:nth-child(1) {
   transform: rotate(45deg) translateY(10px);
 }
-.navbar__toggle.show span:nth-child(2) { opacity: 0; }
+.navbar__toggle.show span:nth-child(2) {
+   opacity: 0; 
+  }
 .navbar__toggle.show span:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
 }
@@ -550,7 +552,7 @@ button {
   color: var(--color-liver);
   font-style: italic;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--color-liver) 0%, var(--color-tan-dark) 100%);
+  background: linear-gradient(135deg, var(--color-liver), var(--color-tan-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -563,7 +565,7 @@ button {
   font-size: clamp(1.3rem, 1.8vw, 1.7rem);
   font-family: var(--font-display);
   line-height: 1.7;
-  color: var(--color-muted);
+  color: var(--color-liver);
   font-style: italic;
   margin: 0;
 }
@@ -573,7 +575,7 @@ button {
   font-weight: 400;
   font-family: var(--font-display);
   font-style: italic;
-  color: var(--color-tan-dark);
+  color: var(--color-liver);
   margin-top: 0.5rem;
   opacity: 0.9;
 }
@@ -614,15 +616,15 @@ button {
   left: 0;
   width: 100%;
   height: auto;
-  min-height: 45vh;
+  min-height: 65vh;
   z-index: 0;
   pointer-events: none;
 }
-.hero-wave--mobile { display: none; }
+.hero-wave--mobile {
+   display: none; 
+  }
 
-/* =========================================
-   5. RESPONSIVE & ENHANCEMENTS
-   ========================================= */
+/* DESKTOP RESPONSIVENESS_________________________________________________ */
 @media (min-width: 901px) {
   .navbar {
     top: calc(var(--topbar-height) + 16px);
