@@ -43,7 +43,6 @@ body {
   font-family: var(--font-body);
   background-color: var(--color-cream);
   color: var(--color-dark);
-  line-height: 1.7;
   overflow-x: hidden;
 }
 
@@ -188,7 +187,6 @@ button{
   width: 22px;
   height: 1.5px;
   background: var(--color-liver);
-  border-radius: 2px;
   transition: var(--transition);
 }
 .navbar__toggle.show span:nth-child(1) {transform: rotate(45deg) translateY(10px);}
@@ -200,7 +198,6 @@ button{
   position: absolute; 
   top: calc(100% + 15px); 
   left: 50%;
-  transform: translateX(-50%) translateY(10px);
   min-width: 240px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(24px); 
@@ -269,7 +266,7 @@ button{
   gap: 1rem; 
   border-radius: 0 0 var(--radius-md) var(--radius-md);
   opacity: 0; 
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-menu:not([hidden]) {
   display: flex; 
@@ -304,7 +301,6 @@ button{
 .mobile-dropdown__menu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .mobile-dropdown.open .mobile-dropdown__menu { max-height: 500px; }
 .mobile-dropdown__header {
@@ -394,7 +390,6 @@ button{
   transform: translateX(-20%);
   object-fit: contain;
 }
-
 /* SVG Wave */
 .hero-wave {
   position: absolute;
@@ -406,7 +401,6 @@ button{
   z-index: 0;
 }
 .hero-wave--mobile { display: none; }
-/* Underline style */
 .navbar__link::after {
   content: ''; 
   position: absolute;
@@ -426,20 +420,16 @@ button{
 
 /* Desktops */
 @media (min-width: 901px) {
-  .navbar {top: calc(var(--topbar-height) + 16px); width: min(1180px, calc(100% - 2.5rem));}
-  .navbar__links { display: flex; gap: 2.5rem; height: 100%; }
-  .navbar__item { height: 100%; display: flex; align-items: center; }
-  .navbar__link { padding: 0.5rem 0; transition: color 0.3s ease; }
+  .navbar{top: calc(var(--topbar-height) + 16px); width: min(1180px, calc(100% - 2.5rem));}
+  .navbar__links{ display: flex; gap: 2.5rem; height: 100%; }
+  .navbar__item{height: 100%; display: flex; align-items: center; }
+  .navbar__link{ padding: 0.5rem 0; transition: color 0.3s ease; }
   .mobile-menu, .navbar__toggle, .menu-overlay { display: none !important; }
-  .hero-image {
-    margin-right: 40%;
-    object-fit: cover; 
-    top: 200px;
-    
-  }
+  .hero-image{margin-right: 40%;object-fit: cover; top: 200px;}
+  .hero-circle{top: 0px;}
 }
 
-/* Tablets */
+/* Tablets(POTRIAT LANDSCAPE)_________________________________________________________________ */
 @media (max-width: 900px) {
   .menu-overlay { display: block; }
   body.no-scroll { overflow: hidden; }
@@ -451,14 +441,15 @@ button{
   .hero{min-height: 80vh;}
   .hero-visual {
     justify-content: flex-end;
+    margin-top: 30px;
     height: clamp(400px, 55vw, 540px);
-    padding-right: 2%;
+    padding-right: 1%;
   }
   .hero-circle {
     width: clamp(340px, 30vw, 480px);
     height: clamp(340px, 30vw, 480px);
     right: 0;
-    bottom: 50px;
+    bottom: 50%;
     transform: translateX(15%);
   }
   .hero-image {
@@ -468,9 +459,9 @@ button{
   }
 }
 
-/* Mobile */
+/* Mobile__________________________________________________ */
 @media (max-width: 600px) {
-  .hero { padding-top: calc(var(--topbar-height) + var(--nav-height) + 1.5rem); }
+  .hero {padding-top: calc(var(--topbar-height) + var(--nav-height) + 1.5rem); }
   .hero-text{ gap: 0.75rem;}
   .hero-container{flex-direction: column;}
   .hero-title-line{ font-size: 2.2rem;}
@@ -478,7 +469,7 @@ button{
   .hero-wave--mobile { display: block; }
   .hero-visual {height: 280px; justify-content: flex-end; }
   .hero-circle {
-    width: 220px; height: 220px; right: 0;
+    width: 220px;
     transform: translateX(50%); filter: blur(35px); opacity: 1;
   }
   .hero-image {
@@ -488,26 +479,37 @@ button{
   }
 }
 
-/* Small phones */
+/* landscape for phones and small laptops__________________________*/
+@media (max-height: 500px) {
+  .hero {
+    padding-top: calc(var(--topbar-height) + var(--nav-height) + 0.5rem); 
+    min-height: auto;
+  }
+  .hero-image {width: 35% !important;bottom: -20px !important;right: 15px;}
+  .hero-circle{top: 1px;}
+  .hero-visual {height: 250px !important;
+  }
+}
+/*Potriat Small phones ____________________________________*/
 @media (max-width: 475px) {
   .navbar { width: calc(100% - 1.5rem); top: calc(var(--topbar-height) + 8px);}
   .hero{min-height: 100vh;}
   .hero-title-line{ font-size: 1.9rem; }
-  .hero-circle{ width: 290px; height: 290px; opacity: 1;}
+  .hero-circle{ width: 290px; height: 290px; opacity: 1; top: 10px;}
   .hero-image { width: 100%; transform: translateX(100px); }
-  .hero-wave--mobile{
-    min-height: 45vh;
-  }
+  .hero-wave--mobile{min-height: 45vh;}
 }
 
-/* Landscape */
-@media (max-height: 700px) and (orientation: landscape) {
+/* Landscape tablets________________________________________ */
+@media (max-height: 900px) and (orientation: landscape) {
   .hero {
+    display: flex;
     min-height: 100vh; 
     padding-top: calc(var(--topbar-height) + var(--nav-height) + 1rem);
     align-items: flex-start;
+    flex-direction: column;
   }
-  .hero-container { gap: var(--space-md); padding-top: 1rem; }
+  .hero-container { gap: var(--space-md);  }
   .hero-visual { height: 220px; }
   .hero-title-line { font-size: clamp(1.8rem, 4vw, 3rem); }
   .hero-lead { font-size: 0.95rem; }
