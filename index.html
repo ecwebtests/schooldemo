@@ -17,38 +17,33 @@
   <marquee class="topbar" behavior="scroll" direction="left" scrollamount="3">
     <div class="container topbar__inner">
       <div class="topbar__left">
-        <a href="tel:+256700000000" class="topbar__item">
-          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
-          </svg>
+        <a href="tel:+256777891441" class="topbar__item">
+          <i class="fa fa-mobile topbar__icon"></i>
           <span>+256 777 891 000</span>
         </a>
-        <span class="topbar__divider"></span>
+
+  
         <a href="mailto:school@example.com" class="topbar__item">
-          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
+          <i class="fa fa-envelope topbar__icon"></i>
           <span>school@example.com</span>
-          <span class="topbar__divider"></span>
         </a>
-        <span class="topbar__divider"></span>
+
         <div class="topbar__item">
-          <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
+          <i class="fa fa-map-marker topbar__icon"></i>
           <span>Lira, Uganda</span>
         </div>
-      </div>
-      <div class="topbar__right">
-        <span class="topbar__divider"></span>
-        <span class="topbar__item">Mon – Fri &nbsp;8am – 6pm</span>
+        
+      
+        <div class="topbar__item">
+         <i class="fa fa-clock-o topbar__icon"></i>
+          <span>  Mon – Fri & 8am – 6pm</span>
+        </div>
+
       </div>
     </div>
   </marquee>
 
-  <!--Dark overlay-->
+  <!--white overlay-->
   <div class="menu-overlay" id="menuOverlay"></div>
 
   <!--NAVBAR ───────────────────────────────────── -->
@@ -59,9 +54,8 @@
       <ul class="navbar__links">
         <li class="navbar__item dropdown">
           <a href="#about" class="navbar__link">About Us
-            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
+            <i class="fa fa-chevron-down chevron"></i>
           </a>
-          <!-- About Us Dropdown -->
           <div class="dropdown__menu">
             <div class="dropdown__header">Who we are</div>
             <a href="#about"><i class="fa fa-home"></i>Our School</a>
@@ -74,9 +68,8 @@
 
         <li class="navbar__item dropdown">
           <a href="#academics" class="navbar__link">Academics
-            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
+            <i class="fa fa-chevron-down chevron"></i>
           </a>
-          <!-- Academics Dropdown -->
           <div class="dropdown__menu">
             <div class="dropdown__header">Learning</div>
             <a href="#academics"><i class="fa fa-book"></i>Programmes & Depts</a>
@@ -89,9 +82,8 @@
 
         <li class="navbar__item dropdown">
           <a href="#admissions" class="navbar__link">Admissions
-            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
+            <i class="fa fa-chevron-down chevron"></i>
           </a>
-          <!-- Admissions Dropdown -->
           <div class="dropdown__menu">
             <div class="dropdown__header">Join us</div>
             <a href="#admissions"><i class="fa fa-sign-in"></i>How to Apply</a>
@@ -104,7 +96,7 @@
 
         <li class="navbar__item dropdown">
           <a href="#community" class="navbar__link">Community
-            <svg class="chevron" viewBox="0 0 10 6" aria-hidden="true"><polyline points="1,1 5,5 9,1"/></svg>
+            <i class="fa fa-chevron-down chevron"></i>
           </a>
           <div class="dropdown__menu">
             <div class="dropdown__header">School life</div>
@@ -130,13 +122,10 @@
   <!-- MOBILE MENU WITH DROPDOWN MENUS -->
   <div class="mobile-menu" id="mobileMenu" hidden>
 
-    <!-- About Us Dropdown -->
     <div class="mobile-dropdown">
       <button class="mobile-dropdown__trigger">
         About Us
-        <svg class="mobile-chevron" viewBox="0 0 10 6" aria-hidden="true">
-          <polyline points="1,1 5,5 9,1"/>
-        </svg>
+        <i class="fa fa-chevron-down mobile-chevron"></i>
       </button>
       <div class="mobile-dropdown__menu">
         <div class="mobile-dropdown__header">Who we are</div>
@@ -148,13 +137,10 @@
       </div>
     </div>
 
-    <!-- Academics Dropdown -->
     <div class="mobile-dropdown">
       <button class="mobile-dropdown__trigger">
         Academics
-        <svg class="mobile-chevron" viewBox="0 0 10 6" aria-hidden="true">
-          <polyline points="1,1 5,5 9,1"/>
-        </svg>
+        <i class="fa fa-chevron-down mobile-chevron"></i>
       </button>
       <div class="mobile-dropdown__menu">
         <div class="mobile-dropdown__header">Learning</div>
@@ -166,13 +152,10 @@
       </div>
     </div>
 
-    <!-- Admissions Dropdown -->
     <div class="mobile-dropdown">
       <button class="mobile-dropdown__trigger">
         Admissions
-        <svg class="mobile-chevron" viewBox="0 0 10 6" aria-hidden="true">
-          <polyline points="1,1 5,5 9,1"/>
-        </svg>
+        <i class="fa fa-chevron-down mobile-chevron"></i>
       </button>
       <div class="mobile-dropdown__menu">
         <div class="mobile-dropdown__header">Join us</div>
@@ -184,13 +167,10 @@
       </div>
     </div>
 
-    <!-- Community Dropdown -->
     <div class="mobile-dropdown">
       <button class="mobile-dropdown__trigger">
         Community
-        <svg class="mobile-chevron" viewBox="0 0 10 6" aria-hidden="true">
-          <polyline points="1,1 5,5 9,1"/>
-        </svg>
+        <i class="fa fa-chevron-down mobile-chevron"></i>
       </button>
       <div class="mobile-dropdown__menu">
         <div class="mobile-dropdown__header">School life</div>
@@ -202,62 +182,47 @@
       </div>
     </div>
 
-    <!-- CTA Button -->
     <a href="#admissions" class="mobile-menu__link mobile-menu__link--cta">Apply Now →</a>
-
   </div>
 
   <!--MAIN ─────────────────────────────────────── -->
   <main>
-    <!-- HERO SECTION-->
     <section class="hero" id="hero">
-      <!-- Desktop / Tablet Wave -->
       <svg class="hero-wave hero-wave--desktop" viewBox="0 0 1440 120" preserveAspectRatio="none">
         <defs>
           <linearGradient id="waveDesktop" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="100%" stop-color=" #6A3428"/>
+            <stop offset="100%" stop-color="#6A3428"/>
           </linearGradient>
         </defs>
         <path fill="url(#waveDesktop)" d="M0,85 C300,5 950,65 1440,0 L1740,120 L0,120 Z"/>
       </svg>
 
-      <!-- Mobile Wave -->
       <svg class="hero-wave hero-wave--mobile" viewBox="0 0 1440 120" preserveAspectRatio="none">
         <defs>
           <linearGradient id="waveMobile" x1="0%" y1="0%" x2="100%" y2="0%">
-            
             <stop offset="100%" stop-color="#6A3428"/>
           </linearGradient>
         </defs>
         <path fill="url(#waveMobile)" d="M0,55 C600,5 2050,10 1440,1 L1540,120 L0,120 Z"/>
       </svg>
 
-      <!-- CONTENT -->
       <div class="container hero-container">
-
-        <!-- TEXT COLUMN -->
         <div class="hero-text">
           <h1 class="hero-title">
             <span class="hero-title-line">Excellence Begins Here With Us</span>
           </h1>
           <p class="hero-lead">Discover & Unlock Your Potential</p>
-          
         </div>
 
-        <!-- VISUAL COLUMN -->
         <div class="hero-visual">
           <div class="hero-circle"></div>
           <img src="Images/14003-removebg-preview.png" alt="Student" class="hero-image">
         </div>
-
       </div>
-
     </section>
 
-
-    <section>
-    </section>
-</main>
+    
+  </main>
 
   <script src="script.js" defer></script>
 </body>

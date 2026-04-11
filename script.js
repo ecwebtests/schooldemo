@@ -5,7 +5,7 @@ const mobileMenu = document.getElementById('mobileMenu');
 const dropdownItems = document.querySelectorAll('.navbar__item.dropdown');
 const menuOverlay = document.getElementById('menuOverlay');
 
-// Navbar Scroll Shadow______________________________________________________
+// Navbar Scroll ______________________________________________________
 function handleNavScroll() {
   if (navbar) {
     if (window.scrollY > 20) {
@@ -15,7 +15,6 @@ function handleNavScroll() {
     }
   }
 }
-
 // Mobile Menu Toggle________________________________________________________
 function toggleMobileMenu() {
   if (mobileMenu && hamburger) {
@@ -31,7 +30,6 @@ function toggleMobileMenu() {
     }
   }
 }
-
 // Close mobile menu________________________________________________________________
 function closeMobileMenu() {
   if (mobileMenu && hamburger) {
@@ -97,88 +95,56 @@ dropdownItems.forEach(item => {
   dropdownMenu.addEventListener('mouseleave', closeMenu);
 });
 
-
-
 //MOBILE DROPDOWN FUNCTIONALITY_____________________________________________________________
-// Close all mobile dropdowns
 function closeAllMobileDropdowns() {
   const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
   mobileDropdowns.forEach(dropdown => {
     dropdown.classList.remove('open');
   });
 }
-
 // Initialize mobile dropdown toggles___________________________________________________________
 function initMobileDropdowns() {
   const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-  
   mobileDropdowns.forEach(dropdown => {
     const trigger = dropdown.querySelector('.mobile-dropdown__trigger');
-    
     if (trigger) {
       trigger.addEventListener('click', (e) => {
         e.stopPropagation();
-        
         // Close other open dropdowns
         mobileDropdowns.forEach(otherDropdown => {
           if (otherDropdown !== dropdown && otherDropdown.classList.contains('open')) {
             otherDropdown.classList.remove('open');
           }
         });
-        
         // Toggle current dropdown
         dropdown.classList.toggle('open');
       });
     }
   });
 }
-
-
-
-
-
 // EVENT LISTENERS___________________________________________________________
-// Scroll event
 window.addEventListener('scroll', handleNavScroll);
-
-
-// Hamburger click
 hamburger?.addEventListener('click', toggleMobileMenu);
-
-
 //OverLay click
 menuOverlay?.addEventListener('click',closeMobileMenu);
-
-
-
 // Mobile menu links - close menu when clicked
 if (mobileMenu) {
-
   // Close menu when clicking regular links 
   mobileMenu.querySelectorAll('.mobile-menu__link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
-  
-
   // For dropdown links, close menu after navigation
   mobileMenu.querySelectorAll('.mobile-dropdown__link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 }
-
 // Click outside to close
 document.addEventListener('click', handleClickOutside);
-
 // Initialize mobile dropdowns when DOM is ready
 function init() {
   handleNavScroll();
   initMobileDropdowns();
 }
-
-
-
-
-
 // Start when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', init);
