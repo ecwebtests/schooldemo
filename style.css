@@ -51,18 +51,10 @@ a {
   color: inherit; 
   transition: all var(--transition);
  }
-button{
-  font: inherit;
-  background: none;
-  border: none;
-  cursor: pointer; 
+button{font: inherit; background: none;  border: none; cursor: pointer; 
 }
-/*Container layout*/
-.container {
-  width: min(var(--container-max), 100%);
-  margin-inline: auto;
-  padding-inline: var(--space-md);
-}
+/*Container layout____________________________________*/
+.container { width: min(var(--container-max), 100%); margin-inline: auto; padding-inline: var(--space-md);}
 /* Topbar _________________________________________________________________*/
 .topbar {
   position: fixed;
@@ -74,8 +66,6 @@ button{
   align-items: center;
   overflow: hidden;
 }
-
-
 /*SCROLLING ANIMATION__________________________________________*/
 .topbar__inner {
   display: flex;
@@ -85,18 +75,10 @@ button{
 }
 
 @keyframes scroll-left{
-  from{
-    transform: translateX(100%);
-  } to{
-    transform: translateX(-100%);
-  }
+  from{ transform: translateX(100%);}
+  to{transform: translateX(-100%);}
 }
-
-.topbar__left {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
+.topbar__left {display: flex;  align-items: center; gap: 1.5rem; }
 .topbar__item {
   display: flex;
   align-items: center;
@@ -106,11 +88,8 @@ button{
   color: var(--color-tan);
 }
 .topbar__item:hover { color: var(--color-tan); }
-.topbar__icon {
-  font-size: 16px;
-  color: var(--color-tan);
-  flex-shrink: 0;
-}
+
+.topbar__icon { font-size: 16px; color: var(--color-tan); flex-shrink: 0; }
 /* Navbar)_______________________________________________________________ */
 .navbar {
   position: fixed; 
@@ -354,9 +333,16 @@ button{
   align-items: center;
   gap: var(--space-sm); 
   position: relative; 
-  z-index: 2;
   width: 100%;
+  background-image: url('https://preline.co/assets/svg/examples/polygon-bg-element.svg');
+  position: absolute;
+  z-index: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+
 .hero-text {
   width: 100%;
   max-width: var(--container-max);
@@ -383,7 +369,6 @@ button{
   font-family: var(--font-body); 
   color: var(--color-muted); 
 }
-
 /* IMAGE AND CIRCLE */
 .hero-visual {
   position: relative;
@@ -418,15 +403,7 @@ button{
   height: 50vh;
   z-index: 0;
 }
-.hero-wave path:nth-child(1) {
-  filter: blur(1px);
-}
 
-.hero-wave path {
-  transition: all 0.4s ease;
-}
-
-.hero-wave--mobile { display: none; }
 .navbar__link::after {
   content: ''; 
   position: absolute;
@@ -461,12 +438,9 @@ button{
 
 /* Tablets(POTRIAT LANDSCAPE)_________________________________________________________________ */
 @media (max-width: 900px) {
-  .topbar__inner {
-  animation: scroll-left 30s linear infinite;
-}
+  .topbar__inner {animation: scroll-left 20s linear infinite;}
   .navbar{box-shadow: var(--shadow-md) !important;}
   .menu-overlay { display: block; }
-  body.no-scroll { overflow: hidden; }
   .navbar__links { display: none; }
   .navbar__actions { display: flex; }
   .navbar__toggle { display: flex; }
@@ -477,8 +451,7 @@ button{
     justify-content: flex-end;
     margin-top: 30px;
     height: clamp(400px, 55vw, 540px);
-    padding-right: 1%;
-  }
+    padding-right: 1%;}
   .hero-circle {
     width: clamp(340px, 29vw, 480px);
     height: clamp(340px, 29vw, 480px);
@@ -486,23 +459,17 @@ button{
     bottom: 40%;
     transform: translateX(15%);
   }
-  .hero-image {
-    width: clamp(360px, 52vw, 500px);
-    transform: translateX(-8%);
-    bottom: -70px;
-  }
+  .goldhight{display: none;}
+  .hero-image {width: clamp(360px, 52vw, 500px); transform: translateX(-8%); bottom: -70px;}
 }
-
 /* Mobile__________________________________________________ */
 @media (max-width: 600px) {
   .hero {padding-top: calc(var(--topbar-height) + var(--nav-height) + 1.5rem); }
   .hero-text{ gap: 1.2rem; }
   .hero-container{flex-direction: column;}
   .hero-title-line{ font-size: 2.2rem;}
-  .hero-wave--mobile { display: block; }
   .hero-visual {height: 280px; justify-content: flex-end; }
-  .hero-circle {width: 220px;transform: translateX(50%);
-  }
+  .hero-circle {width: 220px;transform: translateX(50%);}
   .hero-image {
     width: 75%; max-width: 320px;
     transform: translateX(-5%);
@@ -513,14 +480,8 @@ button{
 
 /* landscape for phones and small laptops__________________________*/
 @media (max-height: 500px) {
-  .hero {
-    padding-top: calc(var(--topbar-height) + var(--nav-height) + 0.5rem); 
-    min-height: auto;
-  }
-  .hero-image {
-    width: 35% !important;
-    bottom: -20px !important;
-    right: 15px;}
+  .hero {padding-top: calc(var(--topbar-height) + var(--nav-height) + 0.5rem); min-height: auto;}
+  .hero-image {width: 35% !important;bottom: -20px !important;right: 15px;}
   .hero-visual {height: 250px !important;}
 }
 /*Potriat Small phones ____________________________________*/
@@ -546,14 +507,4 @@ button{
   .hero-title-line { font-size: clamp(1.8rem, 4vw, 3rem); }
   .hero-lead { font-size: 0.95rem; }
   .hero-circle{bottom: -20px;}
-}
-.hero-container
-{
-  background-image: url('https://preline.co/assets/svg/examples/polygon-bg-element.svg');
-  position: absolute;
-  z-index: 0;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
