@@ -406,10 +406,10 @@ button{
 }
 .hero-circle {
   position: absolute;
-  width: clamp(400px, 32vw, 420px);
-  height: clamp(400px, 32vw, 420px);
-  background-color: #cfb48b;
-  border: 4px solid  var(--body-bg);
+  width: clamp(350px, 28vw, 420px);
+  height: clamp(350px, 28vw, 420px);
+  background-color: var(--color-tan);
+ 
   border-radius: 50%;
   z-index: 1;
   
@@ -468,8 +468,8 @@ button{
   .navbar__link{ padding: 0.5rem 0; transition: color 0.3s ease; }
   .mobile-menu, .navbar__toggle, .menu-overlay { display: none !important; }
   .hero-image{margin-right: 40%;object-fit: cover; top: 200px;}
-  .hero-circle{top: 0px;}
-  .hero-text{margin-top: 100px;}
+  .hero-circle{top: 20px;}
+  .hero-text{margin-top: 50px;}
 }
 
 /* Tablets(POTRIAT LANDSCAPE)_________________________________________________________________ */
@@ -509,7 +509,6 @@ button{
   .hero-text{ gap: 1.2rem; }
   .hero-container{flex-direction: column;}
   .hero-title-line{ font-size: 2.2rem;}
-  .hero-wave--desktop { display: none; }
   .hero-wave--mobile { display: block; }
   .hero-visual {height: 280px; justify-content: flex-end; }
   .hero-circle {width: 220px;transform: translateX(50%);
@@ -539,10 +538,9 @@ button{
   .navbar { width: calc(100% - 1.5rem); top: calc(var(--topbar-height) + 8px);}
   .hero{min-height: 100vh;}
   .hero-title-line{ font-size: 1.9rem; }
-  .hero-circle{ width: 290px; height: 290px; opacity: 1; top: -30px;}
+  .hero-circle{ width: 290px; height: 290px; opacity: 1; top: -90px;}
   .hero-image { width: 100%; transform: translateX(100px); }
   .hero-wave--mobile{min-height: 45vh;}
-  .hero-text{p-top: 20px;}
 }
 /* Landscape tablets________________________________________ */
 @media (max-height: 900px) and (orientation: landscape) {
