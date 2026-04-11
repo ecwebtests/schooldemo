@@ -6,180 +6,229 @@
   <title>Home</title>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+      <header>
+        <!--TOPBAR ───────────────────────────────────── -->
+        <div class="topbar" >
+          <div class="container topbar__inner">
+            <div class="topbar__left">
+              <a href="tel:+256 777 891 000" class="topbar__item">
+                <i class="fa-solid fa-phone topbar__icon"></i>
+                <span>+256 777 891 000</span>
+              </a>
 
-  <!--TOPBAR ───────────────────────────────────── -->
-  <marquee class="topbar" behavior="scroll" direction="left" scrollamount="4">
-    <div class="container topbar__inner">
-      <div class="topbar__left">
-        <a href="tel:+256777891441" class="topbar__item">
-          <i class="fa fa-mobile topbar__icon"></i>
-          <span>+256 777 891 000</span>
-        </a>
+              <a href="mailto:school@example.com" class="topbar__item">
+                <i class="fa fa-envelope topbar__icon"></i>
+                <span>school@example.com</span>
+              </a>
+
+              <div class="topbar__item">
+                <i class="fa fa-map-marker topbar__icon"></i>
+                <span>Lira, Uganda</span>
+              </div>
+              
+            
+              <div class="topbar__item">
+              <i class="fa fa-clock-o topbar__icon"></i>
+                <span>  Mon – Fri & 8am – 6pm</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+              <!--overlay-->
+              <div class="menu-overlay" id="menuOverlay"></div>
+              <!--NAVBAR ───────────────────────────────────── -->
+              <nav id="mainNav" class="navbar">
+                <div class="container navbar__inner">
+                  <a href="index.html" class="navbar__logo">AW<span>S</span></a>
+
+                  <ul class="navbar__links">
+                    <li class="navbar__item dropdown">
+                      <a href="#about" class="navbar__link">About Us
+                        <i class="fa fa-chevron-down chevron"></i>
+                      </a>
+                      <div class="dropdown__menu">
+                        <div class="dropdown__header">Who we are</div>
+                        <a href="#about"><i class="fa fa-home"></i>Our School</a>
+                        <a href="#about"><i class="fa fa-info-circle"></i>Mission & Vision</a>
+                        <a href="#about"><i class="fa fa-users"></i>Administration</a>
+                        <a href="#about"><i class="fa fa-history"></i>History</a>
+                        <a href="#about"><i class="fa fa-trophy"></i>Accreditation</a>
+                      </div>
+                    </li>
+
+                    <li class="navbar__item dropdown">
+                      <a href="#academics" class="navbar__link">Academics
+                        <i class="fa fa-chevron-down chevron"></i>
+                      </a>
+                      <div class="dropdown__menu">
+                        <div class="dropdown__header">Learning</div>
+                        <a href="#academics"><i class="fa fa-book"></i>Programmes & Depts</a>
+                        <a href="#academics"><i class="fa fa-file-text"></i>Curriculum</a>
+                        <a href="#academics"><i class="fa fa-calendar"></i>Timetable</a>
+                        <a href="#academics"><i class="fa fa-check-square-o"></i>Examinations</a>
+                        <a href="#academics"><i class="fa fa-bookmark"></i>Library</a>
+                      </div>
+                    </li>
+
+                    <li class="navbar__item dropdown">
+                      <a href="#admissions" class="navbar__link">Admissions
+                        <i class="fa fa-chevron-down chevron"></i>
+                      </a>
+                      <div class="dropdown__menu">
+                        <div class="dropdown__header">Join us</div>
+                        <a href="#admissions"><i class="fa fa-sign-in"></i>How to Apply</a>
+                        <a href="#admissions"><i class="fa fa-list-ul"></i>Requirements</a>
+                        <a href="#admissions"><i class="fa fa-money"></i>Fees & Tuition</a>
+                        <a href="#admissions"><i class="fa fa-star"></i>Scholarships</a>
+                        <a href="#admissions"><i class="fa fa-question-circle"></i>FAQs</a>
+                      </div>
+                    </li>
+
+                    <li class="navbar__item dropdown">
+                      <a href="#community" class="navbar__link">Community
+                        <i class="fa fa-chevron-down chevron"></i>
+                      </a>
+                      <div class="dropdown__menu">
+                        <div class="dropdown__header">School life</div>
+                        <a href="#community"><i class="fa fa-newspaper-o"></i>News & Events</a>
+                        <a href="#community"><i class="fa fa-picture-o"></i>Gallery</a>
+                        <a href="#community"><i class="fa fa-briefcase"></i>Staff Portal</a>
+                        <a href="#community"><i class="fa fa-users"></i>Student Life</a>
+                        <a href="#community"><i class="fa fa-phone"></i>Contact Us</a>
+                      </div>
+                    </li>
+                  </ul>
+
+                  <div class="navbar__actions">
+                    <button class="navbar__toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </div>
+                </div>
+              </nav>
+
+                  <!-- MOBILE MENU WITH DROPDOWN MENUS -->
+                  <div class="mobile-menu" id="mobileMenu" hidden>
+
+                    <div class="mobile-dropdown">
+                      <button class="mobile-dropdown__trigger">About Us<i class="fa fa-chevron-down mobile-chevron"></i></button>
+                      <div class="mobile-dropdown__menu">
+                        <a href="#about" class="mobile-dropdown__link">Our School</a>
+                        <a href="#about" class="mobile-dropdown__link">Mission & Vision</a>
+                        <a href="#about" class="mobile-dropdown__link">Administration</a>
+                        <a href="#about" class="mobile-dropdown__link">History</a>
+                        <a href="#about" class="mobile-dropdown__link">Accreditation</a>
+                      </div>
+                    </div>
+
+                    <div class="mobile-dropdown">
+                      <button class="mobile-dropdown__trigger">Academics<i class="fa fa-chevron-down mobile-chevron"></i></button>
+                      <div class="mobile-dropdown__menu">
+                        <a href="#academics" class="mobile-dropdown__link"> Programmes & Depts</a>
+                        <a href="#academics" class="mobile-dropdown__link">Curriculum</a>
+                        <a href="#academics" class="mobile-dropdown__link">Timetable</a>
+                        <a href="#academics" class="mobile-dropdown__link">Examinations</a>
+                        <a href="#academics" class="mobile-dropdown__link"> Library</a>
+                      </div>
+                    </div>
+
+                    <div class="mobile-dropdown">
+                      <button class="mobile-dropdown__trigger">Admissions<i class="fa fa-chevron-down mobile-chevron"></i></button>
+                      <div class="mobile-dropdown__menu">
+                        <a href="#admissions" class="mobile-dropdown__link">How to Apply</a>
+                        <a href="#admissions" class="mobile-dropdown__link">Requirements</a>
+                        <a href="#admissions" class="mobile-dropdown__link">Fees & Tuition</a>
+                        <a href="#admissions" class="mobile-dropdown__link">Scholarships</a>
+                        <a href="#admissions" class="mobile-dropdown__link"> FAQs</a>
+                      </div>
+                    </div>
+
+                    <div class="mobile-dropdown">
+                      <button class="mobile-dropdown__trigger">Community<i class="fa fa-chevron-down mobile-chevron"></i></button>
+                      <div class="mobile-dropdown__menu">
+                        <a href="#community" class="mobile-dropdown__link"> News & Events</a>
+                        <a href="#community" class="mobile-dropdown__link"> Gallery</a>
+                        <a href="#community" class="mobile-dropdown__link"> Staff Portal</a>
+                        <a href="#community" class="mobile-dropdown__link"> Student Life</a>
+                        <a href="#community" class="mobile-dropdown__link">Contact Us</a>
+                      </div>
+                    </div>
+                  </div>
+  </header>
+ 
+
+
 
   
-        <a href="mailto:school@example.com" class="topbar__item">
-          <i class="fa fa-envelope topbar__icon"></i>
-          <span>school@example.com</span>
-        </a>
-
-        <div class="topbar__item">
-          <i class="fa fa-map-marker topbar__icon"></i>
-          <span>Lira, Uganda</span>
-        </div>
-        
-      
-        <div class="topbar__item">
-         <i class="fa fa-clock-o topbar__icon"></i>
-          <span>  Mon – Fri & 8am – 6pm</span>
-        </div>
-
-      </div>
-    </div>
-  </marquee>
-  <!--overlay-->
-  <div class="menu-overlay" id="menuOverlay"></div>
-  <!--NAVBAR ───────────────────────────────────── -->
-  <nav id="mainNav" class="navbar">
-    <div class="container navbar__inner">
-      <a href="index.html" class="navbar__logo">AW<span>S</span></a>
-
-      <ul class="navbar__links">
-        <li class="navbar__item dropdown">
-          <a href="#about" class="navbar__link">About Us
-            <i class="fa fa-chevron-down chevron"></i>
-          </a>
-          <div class="dropdown__menu">
-            <div class="dropdown__header">Who we are</div>
-            <a href="#about"><i class="fa fa-home"></i>Our School</a>
-            <a href="#about"><i class="fa fa-info-circle"></i>Mission & Vision</a>
-            <a href="#about"><i class="fa fa-users"></i>Administration</a>
-            <a href="#about"><i class="fa fa-history"></i>History</a>
-            <a href="#about"><i class="fa fa-trophy"></i>Accreditation</a>
-          </div>
-        </li>
-
-        <li class="navbar__item dropdown">
-          <a href="#academics" class="navbar__link">Academics
-            <i class="fa fa-chevron-down chevron"></i>
-          </a>
-          <div class="dropdown__menu">
-            <div class="dropdown__header">Learning</div>
-            <a href="#academics"><i class="fa fa-book"></i>Programmes & Depts</a>
-            <a href="#academics"><i class="fa fa-file-text"></i>Curriculum</a>
-            <a href="#academics"><i class="fa fa-calendar"></i>Timetable</a>
-            <a href="#academics"><i class="fa fa-check-square-o"></i>Examinations</a>
-            <a href="#academics"><i class="fa fa-bookmark"></i>Library</a>
-          </div>
-        </li>
-
-        <li class="navbar__item dropdown">
-          <a href="#admissions" class="navbar__link">Admissions
-            <i class="fa fa-chevron-down chevron"></i>
-          </a>
-          <div class="dropdown__menu">
-            <div class="dropdown__header">Join us</div>
-            <a href="#admissions"><i class="fa fa-sign-in"></i>How to Apply</a>
-            <a href="#admissions"><i class="fa fa-list-ul"></i>Requirements</a>
-            <a href="#admissions"><i class="fa fa-money"></i>Fees & Tuition</a>
-            <a href="#admissions"><i class="fa fa-star"></i>Scholarships</a>
-            <a href="#admissions"><i class="fa fa-question-circle"></i>FAQs</a>
-          </div>
-        </li>
-
-        <li class="navbar__item dropdown">
-          <a href="#community" class="navbar__link">Community
-            <i class="fa fa-chevron-down chevron"></i>
-          </a>
-          <div class="dropdown__menu">
-            <div class="dropdown__header">School life</div>
-            <a href="#community"><i class="fa fa-newspaper-o"></i>News & Events</a>
-            <a href="#community"><i class="fa fa-picture-o"></i>Gallery</a>
-            <a href="#community"><i class="fa fa-briefcase"></i>Staff Portal</a>
-            <a href="#community"><i class="fa fa-users"></i>Student Life</a>
-            <a href="#community"><i class="fa fa-phone"></i>Contact Us</a>
-          </div>
-        </li>
-      </ul>
-
-      <div class="navbar__actions">
-        <button class="navbar__toggle" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- MOBILE MENU WITH DROPDOWN MENUS -->
-  <div class="mobile-menu" id="mobileMenu" hidden>
-
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown__trigger">About Us<i class="fa fa-chevron-down mobile-chevron"></i></button>
-      <div class="mobile-dropdown__menu">
-        <a href="#about" class="mobile-dropdown__link">Our School</a>
-        <a href="#about" class="mobile-dropdown__link">Mission & Vision</a>
-        <a href="#about" class="mobile-dropdown__link">Administration</a>
-        <a href="#about" class="mobile-dropdown__link">History</a>
-        <a href="#about" class="mobile-dropdown__link">Accreditation</a>
-      </div>
-    </div>
-
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown__trigger">Academics<i class="fa fa-chevron-down mobile-chevron"></i></button>
-      <div class="mobile-dropdown__menu">
-        <a href="#academics" class="mobile-dropdown__link"> Programmes & Depts</a>
-        <a href="#academics" class="mobile-dropdown__link">Curriculum</a>
-        <a href="#academics" class="mobile-dropdown__link">Timetable</a>
-        <a href="#academics" class="mobile-dropdown__link">Examinations</a>
-        <a href="#academics" class="mobile-dropdown__link"> Library</a>
-      </div>
-    </div>
-
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown__trigger">Admissions<i class="fa fa-chevron-down mobile-chevron"></i></button>
-      <div class="mobile-dropdown__menu">
-        <a href="#admissions" class="mobile-dropdown__link">How to Apply</a>
-        <a href="#admissions" class="mobile-dropdown__link">Requirements</a>
-        <a href="#admissions" class="mobile-dropdown__link">Fees & Tuition</a>
-        <a href="#admissions" class="mobile-dropdown__link">Scholarships</a>
-        <a href="#admissions" class="mobile-dropdown__link"> FAQs</a>
-      </div>
-    </div>
-
-    <div class="mobile-dropdown">
-      <button class="mobile-dropdown__trigger">Community<i class="fa fa-chevron-down mobile-chevron"></i></button>
-      <div class="mobile-dropdown__menu">
-        <a href="#community" class="mobile-dropdown__link"> News & Events</a>
-        <a href="#community" class="mobile-dropdown__link"> Gallery</a>
-        <a href="#community" class="mobile-dropdown__link"> Staff Portal</a>
-        <a href="#community" class="mobile-dropdown__link"> Student Life</a>
-        <a href="#community" class="mobile-dropdown__link">Contact Us</a>
-      </div>
-    </div>
-  </div>
   <!--MAIN ─────────────────────────────────────── -->
-  <main>
+<main>
     <section class="hero" id="hero">
-      <svg class="hero-wave hero-wave--desktop" viewBox="0 0 1440 120" preserveAspectRatio="none" >
-        <defs>
-          <linearGradient id="waveDesktop" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="100%" stop-color="#6A3428"/>
-          </linearGradient>
-        </defs>
-        <path fill="url(#waveDesktop)" d="M0,85 C300,5 950,65 1440,0 L1740,120 L0,120 Z"/>
-      </svg>
-      <svg class="hero-wave hero-wave--mobile" viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="waveMobile" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="100%" stop-color="#6A3428"/>
-          </linearGradient>
-        </defs>
-        <path fill="url(#waveMobile)" d="M0,55 C600,5 2050,10 1440,1 L1540,120 L0,120 Z"/>
-      </svg>
+      <svg class="hero-wave hero-wave--desktop" viewBox="0 0 1440 220" preserveAspectRatio="none">
+      <defs>
+
+      <!-- Main Luxury Gradient -->
+      <linearGradient id="waveLuxuryMain" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#7a3a2c"/>
+        <stop offset="50%" stop-color="#5e2b20"/>
+        <stop offset="100%" stop-color="#3d1b14"/>
+      </linearGradient>
+
+      <!-- Highlight Shine -->
+      <linearGradient id="waveShine" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+        <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+      </linearGradient>
+
+      <!-- Tan Accent -->
+      <linearGradient id="waveAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#cfa862"/>
+        <stop offset="100%" stop-color="#f2e6c6"/>
+      </linearGradient>
+
+      </defs>
+      <!-- Deep Background Layer -->
+      <path fill="#5e2b20"opacity="0.25"d="M0,150   C300,60 900,200 1440,110  L1440,220 L0,220  Z"/>
+      <!-- Main Wave -->
+      <path fill="url(#waveLuxuryMain)" d="M0,130 C350,40 950,170 1440,90  L1440,220 L0,220 Z"/>
+      <!--  Accent Line -->
+      <path fill="url(#waveAccent)" opacity="0.9"d="M0,130 C350,40 950,170 1440,90  L1440,105  C950,185 350,60 0,145 Z"/>
+      <!-- Shine Highlight -->
+      <path fill="url(#waveShine)"d="M0,130 C350,40 950,170 1440,90"/>
+
+    </svg>
+
+
+    <svg class="hero-wave hero-wave--mobile" viewBox="0 0 1440 200" preserveAspectRatio="none">
+    <defs>
+            <!-- Mobile Gradient -->
+            <linearGradient id="waveMobileLuxury" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7a3a2c"/>
+              <stop offset="60%" stop-color="#5e2b20"/>
+              <stop offset="100%" stop-color="#3d1b14"/>
+            </linearGradient>
+
+            <!-- Accent -->
+            <linearGradient id="waveMobileAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#cfa862"/>
+              <stop offset="100%" stop-color="#f2e6c6"/>
+            </linearGradient>
+      </defs>
+        <!-- Background Layer -->
+        <path fill="#5e2b20"opacity="0.2"d="M0,140 C500,60 1000,190 1440,100 L1440,200 L0,200 Z"/>
+        <!-- Main Wave -->
+        <path fill="url(#waveMobileLuxury)"d="M0,120 C500,40 1000,170 1440,80 L1440,200 L0,200 Z"/>
+        <!-- Accent line -->
+        <path fill="url(#waveMobileAccent)"opacity="0.9" d="M0,120 C500,40 1000,170 1440,80 L1440,95 C1000,185 500,60 0,135 Z"/>
+    </svg>
+
       <div class="container hero-container">
         <div class="hero-text">
           <h1 class="hero-title">
@@ -192,13 +241,13 @@
 
         <div class="hero-visual">
           <div class="hero-circle"></div>
-          <img src="Images/student-remove.png" alt="Student" class="hero-image">
+          <img src="images/student-remove.png" alt="Student holding a book" class="hero-image" loading="eager">
         </div>
       </div>
     </section>
 
 
-  </main>
+</main>
   <script src="script.js" defer></script>
 </body>
 </html>

@@ -18,7 +18,7 @@ function handleNavScroll() {
 // Mobile Menu Toggle________________________________________________________
 function toggleMobileMenu() {
   if (mobileMenu && hamburger) {
-    if (mobileMenu.hidden === false) {
+    if (!mobileMenu.hidden) {
       mobileMenu.hidden = true;
       hamburger.classList.remove('show');
       menuOverlay.classList.remove('show');
@@ -43,27 +43,11 @@ function closeMobileMenu() {
 // Close mobile menu when clicking outside__________________________________________
 function handleClickOutside(event) {
   if (mobileMenu && !mobileMenu.hidden) {
-    const isClickInside = (hamburger && hamburger.contains(event.target)) || 
-                         (mobileMenu && mobileMenu.contains(event.target));
-    
+    const isClickInside = (hamburger && hamburger.contains(event.target)) || (mobileMenu && mobileMenu.contains(event.target));
     if (!isClickInside) {
       closeMobileMenu();
     }
   }
-}
-
-//OVERLAY FUNCTION THAT STOPS SCROLLING_____________________________________________
-function openOverLay(){
-  //Show mobile overlay
-  menuOverlay.style.display='block';
-  document.body.classList.add('no-scroll');
-}
-
-
-function closeOverlay(){
-  //Remove overlay
-  menuOverlay.style.display='none';
-  document.body.classList.remove('no-scroll');
 }
 
 
@@ -71,21 +55,15 @@ function closeOverlay(){
 dropdownItems.forEach(item => {
   const dropdownMenu = item.querySelector('.dropdown__menu');
   if (!dropdownMenu) return;
-  
   let closeTimer = null;
-
   function openMenu() {
     clearTimeout(closeTimer);
-    dropdownMenu.style.opacity = '1';
-    dropdownMenu.style.pointerEvents = 'auto';
-    dropdownMenu.style.transform = 'translateX(-50%) translateY(0)';
+    dropdownMenu.classList.add('open');
   }
 
   function closeMenu() {
     closeTimer = setTimeout(() => {
-      dropdownMenu.style.opacity = '0';
-      dropdownMenu.style.pointerEvents = 'none';
-      dropdownMenu.style.transform = 'translateX(-50%) translateY(6px)';
+      dropdownMenu.classList.remove('open');
     }, 100);
   }
 
@@ -95,16 +73,17 @@ dropdownItems.forEach(item => {
   dropdownMenu.addEventListener('mouseleave', closeMenu);
 });
 
-//MOBILE DROPDOWN FUNCTIONALITY_____________________________________________________________
-function closeAllMobileDropdowns() {
-  const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-  mobileDropdowns.forEach(dropdown => {
-    dropdown.classList.remove('open');
-  });
-}
+
+    //MOBILE DROPDOWN FUNCTIONALITY_____________________________________________________________
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    function closeAllMobileDropdowns() {
+      mobileDropdowns.forEach(dropdown => {
+        dropdown.classList.remove('open');
+      });
+    }
+
 // Initialize mobile dropdown toggles___________________________________________________________
 function initMobileDropdowns() {
-  const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
   mobileDropdowns.forEach(dropdown => {
     const trigger = dropdown.querySelector('.mobile-dropdown__trigger');
     if (trigger) {
@@ -125,21 +104,21 @@ function initMobileDropdowns() {
 // EVENT LISTENERS___________________________________________________________
 window.addEventListener('scroll', handleNavScroll);
 hamburger?.addEventListener('click', toggleMobileMenu);
-//OverLay click
 menuOverlay?.addEventListener('click',closeMobileMenu);
-// Mobile menu links - close menu when clicked
+
+
+// Mobile menu links close menu when clicked
 if (mobileMenu) {
-  // Close menu when clicking regular links 
   mobileMenu.querySelectorAll('.mobile-menu__link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
-  // For dropdown links, close menu after navigation
   mobileMenu.querySelectorAll('.mobile-dropdown__link').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
   });
 }
+
 // Click outside to close
-document.addEventListener('click', handleClickOutside);
+document.removeEventListener('click', handleClickOutside);
 // Initialize mobile dropdowns when DOM is ready
 function init() {
   handleNavScroll();
