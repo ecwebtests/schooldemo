@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
 :root {
   --color-liver: #5e2b20;
   --color-tan:#cfa862;
@@ -11,8 +12,10 @@
   --body-bg: #fbf9f7;
 
   /* Typography */
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Manrope', sans-serif;
+  --font-display: 'Cinzel', serif;
+  --font-body: "Noto Sans", sans-serif;
+  
+  
   /* Spacing */
   --space-xs:  0.5rem;
   --space-sm:  1rem;
@@ -204,7 +207,7 @@ button{
   pointer-events: none;
   transition: all 0.3s ease; 
   z-index: 400;
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border-radius: 0 0 var(--radius-sm) var(--radius-md);
   box-shadow: 0 12px 40px rgba(94, 43, 32, 0.12);
 }
 .navbar__item:hover .dropdown__menu {
@@ -269,9 +272,9 @@ button{
   transform: translateY(-20px); 
   pointer-events: none;  
   transition: 
-    opacity 0.4s ease-in-out,
-    visibility 0.4s ease-in-out,
-    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity 0.5s ease-in-out,
+    visibility 0.7s ease-in-out,
+    transform 0.6s cubic-bezier(0.9, 0, 0.2, 1);
 }
 
 .mobile-menu:not([hidden]) {
@@ -301,7 +304,7 @@ button{
   padding: 0.5rem 0;
   font-weight: 500;
   font-size: 1rem;
-  text-transform: capitalize;
+  text-transform:uppercase;
   color: var(--color-liver);
   cursor: pointer; 
 }
@@ -453,7 +456,7 @@ button{
   .navbar__links { display: none; }
   .navbar__actions { display: flex; }
   .navbar__toggle { display: flex; }
-  .hero-title-line { font-size: clamp(2.4rem, 7vw, 4rem); }
+  .hero-title-line { font-size: clamp(2.4rem, 5vw, 4rem); }
   .hero-container{flex-direction: column;}
   .hero{min-height: 80vh;}
   .hero-visual {
@@ -463,16 +466,16 @@ button{
     padding-right: 1%;
   }
   .hero-circle {
-    width: clamp(340px, 30vw, 480px);
-    height: clamp(340px, 30vw, 480px);
+    width: clamp(340px, 29vw, 480px);
+    height: clamp(340px, 29vw, 480px);
     right: 0;
-    bottom: 50%;
+    bottom: 40%;
     transform: translateX(15%);
   }
   .hero-image {
     width: clamp(360px, 52vw, 500px);
     transform: translateX(-8%);
-    bottom: 70px;
+    bottom: -70px;
   }
 }
 
@@ -481,19 +484,16 @@ button{
   .hero {padding-top: calc(var(--topbar-height) + var(--nav-height) + 1.5rem); }
   .hero-text{ gap: 0.75rem; }
   .hero-container{flex-direction: column;}
-  .hero-title-line{ font-size: 2rem;}
+  .hero-title-line{ font-size: 2.2rem;}
   .hero-wave--desktop { display: none; }
   .hero-wave--mobile { display: block; }
   .hero-visual {height: 280px; justify-content: flex-end; }
-  .hero-circle {
-    width: 220px;
-    transform: translateX(50%); opacity: 1;
-    
+  .hero-circle {width: 220px;transform: translateX(50%); opacity: 1;
   }
   .hero-image {
     width: 75%; max-width: 320px;
     transform: translateX(-5%);
-    bottom: -70px !important;
+    bottom: -20px;
   }
 }
 
@@ -503,10 +503,11 @@ button{
     padding-top: calc(var(--topbar-height) + var(--nav-height) + 0.5rem); 
     min-height: auto;
   }
-  .hero-image {width: 35% !important;bottom: -20px !important;right: 15px;}
-  .hero-circle{top: 1px;}
-  .hero-visual {height: 250px !important;
-  }
+  .hero-image {
+    width: 35% !important;
+    bottom: -20px !important;
+    right: 15px;}
+  .hero-visual {height: 250px !important;}
 }
 /*Potriat Small phones ____________________________________*/
 @media (max-width: 475px) {
@@ -517,7 +518,6 @@ button{
   .hero-image { width: 100%; transform: translateX(100px); }
   .hero-wave--mobile{min-height: 45vh;}
 }
-
 /* Landscape tablets________________________________________ */
 @media (max-height: 900px) and (orientation: landscape) {
   .hero {
