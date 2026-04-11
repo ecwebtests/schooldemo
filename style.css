@@ -13,8 +13,6 @@
   /* Typography */
   --font-display: 'Cinzel', serif;
   --font-body: "Noto Sans", sans-serif;
-  
-  
   /* Spacing */
   --space-xs:  0.5rem;
   --space-sm:  1rem;
@@ -40,39 +38,31 @@
 }
 
 * {box-sizing: border-box; margin: 0; padding: 0; }
-
 html { scroll-behavior: smooth;}
-
 body {
   font-family: var(--font-body);
   background-color:var(--body-bg);
   color: var(--color-dark);
   overflow-x: hidden;
 }
-
-
 img { display: block; max-width: 100%; }
-
 a {
   text-decoration: none;   
   color: inherit; 
   transition: all var(--transition);
  }
-
 button{
   font: inherit;
   background: none;
   border: none;
   cursor: pointer; 
 }
-
 /*Container layout*/
 .container {
   width: min(var(--container-max), 100%);
   margin-inline: auto;
   padding-inline: var(--space-md);
 }
-
 /* Topbar */
 .topbar {
   position: fixed;
@@ -117,8 +107,6 @@ button{
   color: var(--color-tan);
   flex-shrink: 0;
 }
-
-
 /* Navbar */
 .navbar {
   position: fixed; 
@@ -137,7 +125,6 @@ button{
   padding: 0 1.5rem;
   transition: all var(--transition);
 }
-
 .navbar__inner {
   display: flex;
   align-items: center;
@@ -267,8 +254,6 @@ button{
   transition: color 0.2s;
 }
 .dropdown__menu a:hover i { color: var(--color-liver); }
-
-
 /* Mobile Menu ___________________________________________*/
 .mobile-menu {
   position: fixed;
@@ -409,16 +394,15 @@ button{
   width: clamp(350px, 28vw, 420px);
   height: clamp(350px, 28vw, 420px);
   background-color: var(--color-tan);
- 
   border-radius: 50%;
   z-index: 1;
-  
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(140, 110, 79, 0.15);    
 }
 .hero-image {
   position: relative; 
   z-index: 2;
   width: clamp(620px, 56vw, 860px);
-
   transform: translateX(-20%);
   object-fit: contain;
 }
@@ -457,7 +441,7 @@ button{
   left: 0;
 }
 
-/* Desktops */
+/* Desktops_________________________________________________________________ */
 @media (min-width: 901px) {
   .navbar{top: calc(var(--topbar-height) + 16px);
      width: min(1180px, calc(100% - 2.5rem));
