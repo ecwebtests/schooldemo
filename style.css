@@ -488,7 +488,7 @@ button{
   .hero-wave--desktop { display: none; }
   .hero-wave--mobile { display: block; }
   .hero-visual {height: 280px; justify-content: flex-end; }
-  .hero-circle {width: 220px;transform: translateX(50%); opacity: 1;
+  .hero-circle {width: 220px;transform: translateX(50%);
   }
   .hero-image {
     width: 75%; max-width: 320px;
@@ -525,7 +525,7 @@ button{
   .hero {
     display: flex;
     min-height: 100vh; 
-    padding-top: calc(var(--topbar-height) + var(--nav-height) + 1rem);
+    padding-top: calc(var(--topbar-height) + var(--nav-height) + 3rem);
     align-items: flex-start;
     flex-direction: column;
   }
@@ -533,4 +533,5 @@ button{
   .hero-visual { height: 220px; }
   .hero-title-line { font-size: clamp(1.8rem, 4vw, 3rem); }
   .hero-lead { font-size: 0.95rem; }
+  .hero-circle{bottom: -20px;}
 }
