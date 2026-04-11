@@ -41,7 +41,7 @@
 html { scroll-behavior: smooth;}
 body {
   font-family: var(--font-body);
-  background-color:var(--body-bg);
+  background-color:var(--color-cream);
   color: var(--color-dark);
   overflow-x: hidden;
 }
@@ -63,7 +63,7 @@ button{
   margin-inline: auto;
   padding-inline: var(--space-md);
 }
-/* Topbar */
+/* Topbar _________________________________________________________________*/
 .topbar {
   position: fixed;
   inset: 0;
@@ -74,12 +74,16 @@ button{
   align-items: center;
   overflow: hidden;
 }
+
+
+/*SCROLLING ANIMATION__________________________________________*/
 .topbar__inner {
   display: flex;
   gap: 2rem;
   white-space: nowrap;
-  animation: scroll-left 50s linear infinite;
+  animation: scroll-left 40s linear infinite;
 }
+
 @keyframes scroll-left{
   from{
     transform: translateX(100%);
@@ -107,7 +111,7 @@ button{
   color: var(--color-tan);
   flex-shrink: 0;
 }
-/* Navbar */
+/* Navbar)_______________________________________________________________ */
 .navbar {
   position: fixed; 
   top: calc(var(--topbar-height) + 12px);
@@ -254,7 +258,7 @@ button{
   transition: color 0.2s;
 }
 .dropdown__menu a:hover i { color: var(--color-liver); }
-/* Mobile Menu ___________________________________________*/
+/* Mobile Menu _____________________________________________________________*/
 .mobile-menu {
   position: fixed;
   top: calc(var(--topbar-height) + var(--nav-height) + 10px);
@@ -365,7 +369,7 @@ button{
   position: relative;
   content: " ";
   width: 50%;
-  height: 5px;
+  height: 10px;
   background: linear-gradient(to right, var(--color-tan), var(--color-tan-light));
 }
 .hero-title-line {
@@ -396,8 +400,7 @@ button{
   background-color: var(--color-tan);
   border-radius: 50%;
   z-index: 1;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.3), 0 0 0 10px rgba(140, 110, 79, 0.15);    
+  box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1), 0 0 0 10px rgba(224, 157, 90, 0.15);    
 }
 .hero-image {
   position: relative; 
@@ -406,7 +409,7 @@ button{
   transform: translateX(-20%);
   object-fit: contain;
 }
-/* SVG Wave */
+/* SVG Wave__________________________________________________ */
 .hero-wave {
   position: absolute;
   bottom: 0;
@@ -458,6 +461,9 @@ button{
 
 /* Tablets(POTRIAT LANDSCAPE)_________________________________________________________________ */
 @media (max-width: 900px) {
+  .topbar__inner {
+  animation: scroll-left 30s linear infinite;
+}
   .navbar{box-shadow: var(--shadow-md) !important;}
   .menu-overlay { display: block; }
   body.no-scroll { overflow: hidden; }
@@ -540,4 +546,14 @@ button{
   .hero-title-line { font-size: clamp(1.8rem, 4vw, 3rem); }
   .hero-lead { font-size: 0.95rem; }
   .hero-circle{bottom: -20px;}
+}
+.hero-container
+{
+  background-image: url('https://preline.co/assets/svg/examples/polygon-bg-element.svg');
+  position: absolute;
+  z-index: 0;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
