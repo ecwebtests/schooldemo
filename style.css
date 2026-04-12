@@ -41,7 +41,7 @@
 html { scroll-behavior: smooth;}
 body {
   font-family: var(--font-body);
-  background-color:var(--color-cream);
+  background-color:var(--body-bg);
   color: var(--color-dark);
   overflow-x: hidden;
 }
@@ -294,7 +294,7 @@ button{font: inherit; background: none;  border: none; cursor: pointer;
   cursor: pointer; 
 }
 .mobile-chevron {
-  font-size: 16px;
+  font-size: 11px;
   transition: transform 0.3s ease; 
 }
 .mobile-dropdown.open .mobile-chevron {
@@ -501,4 +501,9 @@ button{font: inherit; background: none;  border: none; cursor: pointer;
   .hero-title-line { font-size: clamp(1.8rem, 4vw, 3rem); }
   .hero-lead { font-size: 0.95rem; }
   .hero-circle{bottom: -20px;}
+}
+.hero {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg stroke='%235e2b20' stroke-width='0.4' stroke-opacity='0.07'%3E%3Cpath d='M0 0 L40 40 M40 0 L0 40'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 40px 40px;
+  background-repeat: repeat;
 }
